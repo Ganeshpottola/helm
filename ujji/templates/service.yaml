@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "ganni.fullname" . }}
+  name: {{ include "ujji.fullname" . }}
   labels:
-    {{- include "ganni.labels" . | nindent 4 }}
+    {{- include "ujji.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
   ports:
@@ -12,4 +12,4 @@ spec:
       protocol: TCP
       name: http
   selector:
-    {{- include "ganni.selectorLabels" . | nindent 4 }}
+    {{- include "ujji.selectorLabels" . | nindent 4 }}
