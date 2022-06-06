@@ -33,13 +33,12 @@ jobs:
         
         
       - name: push Docker Image
-        id: buildAndPushImage
         with:
           registry_url: 'ganesh0625/nginx'
           repository_name: 'nginx'
           user_name: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
-          image_version: 'v1.0'
+          image_version: 'latest'
 
       # Runs a set of commands using the runners shell
       
