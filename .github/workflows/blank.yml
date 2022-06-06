@@ -39,7 +39,7 @@ jobs:
           registry_url: 'docker.io'
           repository_name: 'ganesh0625/nginx'
           user_name: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
       # Runs a set of commands using the runners shell
       
