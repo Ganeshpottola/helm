@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: docker build image -t ganesh .
+        run: docker image build -t ubuntu-nginx:20.04 .
       - name: Run a 
         run: docker images
         
