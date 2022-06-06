@@ -48,6 +48,12 @@ jobs:
       - name: docker push
         run: docker push ${{ github.sha }}
         
+        run: 
+          while read -r cmd
+               do
+                eval sudo $cmd
+               done < <(Rscript -e 'cat(remotes::system_requirements("ubuntu", "20.04"), sep = "\n")')
+        
 
       # Runs a set of commands using the runners shell
       
