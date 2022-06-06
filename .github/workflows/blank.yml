@@ -41,7 +41,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
           
       - name: docker push
-        run : docker push ganesh0625/nginx:latest
+        run : docker push docker.io/ganesh0625/nginx
 
       # Runs a set of commands using the runners shell
       
