@@ -40,8 +40,8 @@ jobs:
           user_name: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
           
-      - name: docker tag
-        run : docker image tag ubuntu-nginx:20.04 v1
+     # - name: docker tag
+      #  run : docker image tag ubuntu-nginx:20.04 v1
 
       # Runs a set of commands using the runners shell
       
