@@ -30,7 +30,7 @@ jobs:
       
       
       - name: aws configure
-      - uses:  aws-actions/configure-aws-credentials@v1
+        uses:  aws-actions/configure-aws-credentials@v2
         with:
           username: ${{ secrets.AWS_ACCESS }}
           password: ${{ secrets.AWS_SECRET }}
