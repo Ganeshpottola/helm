@@ -34,7 +34,7 @@ jobs:
         
       - name: Build Docker Image
         id: buildAndPushImage
-        uses: ganesh0625/nginx/docker-image-build-push-action@ref
+        uses: ganesh0625/nginx
         with:
           registry_url: 'docker.io'
           repository_name: 'ganesh0625/nginx'
