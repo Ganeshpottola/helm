@@ -46,7 +46,7 @@ jobs:
    #     run : docker image tag 20.04  ${{ github.sha }}
         
       - name: docker push
-        run: docker push ubuntu-nginx:20.04
+        run: docker push 20.04:ubuntu-nginx
         
 
       # Runs a set of commands using the runners shell
