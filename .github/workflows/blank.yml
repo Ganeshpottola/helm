@@ -46,7 +46,7 @@ jobs:
         run : docker image tag ganesh0625/ubuntu-nginx:20.04  ${{ github.sha }}
         
       - name: docker push
-        run: docker push docker.io/ganesh0625/ubuntu-nginx
+        run: docker push docker.io/ganesh0625/ubuntu-nginx:${{ github.sha }}
         
 
       # Runs a set of commands using the runners shell
