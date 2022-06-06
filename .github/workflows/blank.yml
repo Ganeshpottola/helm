@@ -38,4 +38,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: ganesh0625/nginx:latest
+          tags: ganesh0625/nginx:20.04
+      
