@@ -33,7 +33,7 @@ jobs:
         
         
       - name: push Docker Image
-        uses:
+      - uses:
           registry_url: 'ganesh0625/nginx'
           repository_name: 'ganesh0625/nginx'
           user_name: ${{ secrets.DOCKERHUB_USERNAME }}
