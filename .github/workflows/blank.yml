@@ -44,7 +44,7 @@ jobs:
         run : docker image tag ubuntu-nginx:20.04 v1
         
       - name: docker push
-        run: docker push ganesh0625/ubuntu-nginx:v1
+        run: docker push ganesh0625/ubuntu-nginx
 
       # Runs a set of commands using the runners shell
       
