@@ -43,7 +43,7 @@ jobs:
 #           password: ${{ secrets.DOCKER_PASSWORD }}
           
       - name: docker tag
-        run : docker image tag ubuntu-nginx:20.04 ${{ github.sha }}
+        run : docker image tag 20.04  ${{ github.sha }}
         
       - name: docker push
         run: docker push ubuntu-nginx:${{ github.sha }}
