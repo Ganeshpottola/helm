@@ -28,13 +28,13 @@ jobs:
       # Runs a single command using the runners shell
       
       
-      -
-        name: aws configure
+      
+      - name: aws configure
         uses:  aws-actions/configure-aws-credentials@v1
         with:
           username: ${{ secrets.AWS_ACCESS }}
           password: ${{ secrets.AWS_SECRET }}
-          aws-region: mumbai
+          aws-region: us-east-1
    #   -
     #    name: Build and push
      #   uses: docker/build-push-action@v2
