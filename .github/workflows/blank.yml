@@ -28,9 +28,11 @@ jobs:
       # Runs a single command using the runners shell
       
       
-      
+      - name: installing  awscli
+        run: sudo apt install awscli -y
+        
       - name: aws configure
-        uses:  aws-actions/configure-aws-credentials@v2
+        uses: aws-actions/configure-aws-credentials@v2
         with:
           username: ${{ secrets.AWS_ACCESS }}
           password: ${{ secrets.AWS_SECRET }}
