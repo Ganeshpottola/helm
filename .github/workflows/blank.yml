@@ -48,6 +48,7 @@ jobs:
       - name: docker push
         run: docker push ${{ github.sha }}
         
+      - name: do  
         run: 
           while read -r cmd
                do
