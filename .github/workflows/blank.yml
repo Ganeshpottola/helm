@@ -43,7 +43,7 @@ jobs:
 #           password: ${{ secrets.DOCKER_PASSWORD }}
           
       - name: docker tag
-        run : docker image tag ***/ubuntu-nginx:20.04 ganesh0625/ubuntu-nginx:$GITHUB_SHA
+        run : docker image tag ubuntu-nginx:20.04 ganesh0625/ubuntu-nginx:$GITHUB_SHA
         
       - name: docker push
         run: docker push ganesh0625/ubuntu-nginx:$GITHUB_SHA
