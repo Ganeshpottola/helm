@@ -40,8 +40,8 @@ jobs:
           user_name: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           
-      - name: docker tag
-        run : docker image tag ganesh0625/ubuntu-nginx:v1
+#       - name: docker tag
+#         run : docker image tag ganesh0625/ubuntu-nginx:v1
         
       - name: docker push
         run: docker push ganesh0625/ubuntu-nginx:v1
