@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: docker build ganesh .
+        run: docker build image -t ganesh .
       - name: Run a 
         run: docker images
         
