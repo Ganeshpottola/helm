@@ -26,35 +26,16 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: docker image build -t ganesh0625/ubuntu-nginx:20.04 .
-      - name: Run a 
-        run: docker images
-        
-        
-      - name: Login to DockerHub
-        run: docker login -u="${{ secrets.DOCKER_USERNAME }}" -p="${{ secrets.DOCKER_PASSWORD }}"
-
-#         uses: docker/login-action@v2
-#         with:
-#           registry_url: 'docker.io'
-#           repository_name: 'ganesh0625'
-#           user_name: ${{ secrets.DOCKER_USERNAME }}
-#           password: ${{ secrets.DOCKER_PASSWORD }}
-          
-      - name: docker tag
-        run : docker image tag ganesh0625/ubuntu-nginx:20.04  ${{ github.sha }}
-        
-      - name: docker push
-        run: docker push ${{ github.sha }}
-        
-      - name: do  
-        run: 
-          while read -r cmd
-               do
-                eval sudo $cmd
-               done < <(Rscript -e 'cat(remotes::system_requirements("ubuntu", "20.04"), sep = "\n")')
-        
-
-      # Runs a set of commands using the runners shell
       
+        name: Login to DockerHub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+      -
+        name: Build and push
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          push: true
+          tags: sai8465/nginx:latest
