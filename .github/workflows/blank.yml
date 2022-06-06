@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Docker-image-build-and-push
 
 # Controls when the workflow will run
 on:
@@ -30,6 +30,16 @@ jobs:
         run: docker build .
       - name: Run a 
         run: docker images
+        
+        
+      - name: push Docker Image
+        id: buildAndPushImage
+        with:
+          registry_url: 'ganesh0625/nginx'
+          repository_name: 'nginx'
+          user_name: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+          image_version: 'v1.0'
 
       # Runs a set of commands using the runners shell
       
