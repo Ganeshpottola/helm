@@ -41,7 +41,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
           
       - name: docker tag
-        run : docker tag nginx ganesh0625/nginxx
+        run : docker tag ganesh0625/nginx:v1
 
       # Runs a set of commands using the runners shell
       
