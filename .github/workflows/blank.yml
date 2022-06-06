@@ -28,6 +28,8 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: docker build .
+      - name: Run a 
+        run: docker images
 
       # Runs a set of commands using the runners shell
       
