@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: docker image build -t ubuntu-nginx:20.04 .
+        run: docker image build -t ganesh0625/ubuntu-nginx:20.04 .
       - name: Run a 
         run: docker images
         
@@ -41,10 +41,10 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           
 #       - name: docker tag
-#         run : docker image tag ganesh0625/ubuntu-nginx:v1
+#         run : docker image tag ganesh0625/ubuntu-nginx:20.04
         
       - name: docker push
-        run: docker push docker.io/ganesh0625/ubuntu-nginx:20.04
+        run: docker push ganesh0625/ubuntu-nginx:20.04
         
 
       # Runs a set of commands using the runners shell
