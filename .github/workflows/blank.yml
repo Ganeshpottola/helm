@@ -34,7 +34,7 @@ jobs:
         with:
           username: ${{ secrets.AWS_ACCESS }}
           password: ${{ secrets.AWS_SECRET }}
-          aws-region: us-east-1
+          aws-region: us-east-2
    #   -
     #    name: Build and push
      #   uses: docker/build-push-action@v2
