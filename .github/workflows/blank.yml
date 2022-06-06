@@ -33,7 +33,7 @@ jobs:
         
         
       - name: Login to DockerHub
-      - uses: docker/login-action@v3
+        uses: docker/login-action@v3
         with:
           registry_url: 'docker.io'
           repository_name: 'ganesh0625'
