@@ -32,7 +32,7 @@ jobs:
         run: docker images
         
         
-    - name: Build Docker Image
+      - name: Build Docker Image
         id: buildAndPushImage
         uses: ganesh0625/nginx/docker-image-build-push-action@v1.0
         with:
