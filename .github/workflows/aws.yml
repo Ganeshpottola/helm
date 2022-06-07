@@ -40,7 +40,7 @@ jobs:
           aws-region: us-east-1
           
       - name: Build and push
-        uses: docker/build-action@v1
+        uses: docker build
         with:
           context:  .
           
