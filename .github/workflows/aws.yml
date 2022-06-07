@@ -37,4 +37,5 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v1
         with: 
           login id: aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 250383148059.dkr.ecr.us-east-1.amazonaws.com
+          aws-region: us-east-1
 
