@@ -39,6 +39,11 @@ jobs:
           login id: aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 250383148059.dkr.ecr.us-east-1.amazonaws.com
           aws-region: us-east-1
           
-      - name: docker build
-      - uses: docker image build -t  ubuntu-nginx:20.04 .
+      - name: Build and push
+        uses: docker/build-push-action@v1
+        with:
+          context:  .
+          push: true
+          tags: docker tag docker:latest 250383148059.dkr.ecr.us-east-1.amazonaws.com/docker:latest
+    
 
