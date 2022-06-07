@@ -50,8 +50,8 @@ jobs:
           ECR_REPOSITORY: docker
           IMAGE_TAG: srujan
         run: |
-          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:${{ IMAGE_TAG }} .
-          docker push $ECR_REGISTRY/$ECR_REPOSITORY:${{ IMAGE_TAG }}
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:srujan .
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:srujan
           
 
           
