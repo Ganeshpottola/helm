@@ -40,5 +40,5 @@ jobs:
           aws-region: us-east-1
           
       - name: docker build
-        uses: docker build
+        uses: docker build -t nginx .
 
