@@ -40,10 +40,10 @@ jobs:
           aws-region: us-east-1
           
       - name: Build and push
-        uses: docker/build-push-action@v1
+        uses: docker/build-action@v1
         with:
           context:  .
-          push: true
-          tags: docker tag docker:latest 250383148059.dkr.ecr.us-east-1.amazonaws.com/docker:latest
+          
+          
     
 
